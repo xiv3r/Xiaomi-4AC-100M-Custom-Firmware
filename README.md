@@ -38,26 +38,26 @@ telnet 192.168.31.1
 
 - ## Method 1: Download from Repo
 ```sh
-cd /tmp && wget -O KeeneticOS_v3.7.4.bin https://raw.githubusercontent.com/xiv3r/Xiaomi-Mi-Router-4A-Gigabit-KeeneticOS-4.1.7/refs/heads/main/KeeneticOS_v3.7.4.bin
+cd /tmp && wget -O KeeneticOS_v3.7.4-Full-16M.bin https://raw.githubusercontent.com/xiv3r/Xiaomi-4AC-100M-Custom-Firmware/refs/heads/main/KeeneticOS_v3.7.4-Full-16M.bin
 ```
 
 - ## Method 2: Import the firmware using termux Fileserver (stable)
-- Download here the [KeeneticOS_v3.7.4.bin](https://raw.githubusercontent.com/xiv3r/Xiaomi-Mi-Router-4A-Gigabit-KeeneticOS-4.1.7/refs/heads/main/KeeneticOS_v3.7.4.bin) 16MB keenetic firmware, Paste the commands bellow 👇
+- Download here the [KeeneticOS_v3.7.4-Full-16M.bin](https://raw.githubusercontent.com/xiv3r/Xiaomi-4AC-100M-Custom-Firmware/refs/heads/main/KeeneticOS_v3.7.4-Full-16M.bin) 16MB keenetic firmware, Paste the commands bellow 👇
 ```sh
-cd storage/downloads && wget -O KeeneticOS_v3.7.4.bin https://raw.githubusercontent.com/xiv3r/Xiaomi-4AC-100M_Custom-Firmware/refs/heads/main/KeeneticOS_v3.7.4.bin
+cd storage/downloads && wget -O KeeneticOS_v3.7.4-Full-16M.bin https://raw.githubusercontent.com/xiv3r/Xiaomi-4AC-100M-Custom-Firmware/refs/heads/main/KeeneticOS_v3.7.4-Full-16M.bin
 ```
 - Add new termux terminal (swipe left) and paste the commands below 👇 
 ```sh
 cd storage/downloads && python3 -m http.server -b localhost
 ```
 - Goto 👉 [http://localhost:8000](http://localhost:8000)
-- Copy the link of KeeneticOS_v3.7.4.bin file
+- Copy the link of KeeneticOS_v3.7.4-Full-16M.bin file
 ```sh
-cd /tmp && wget -O http://localhost:8000/KeeneticOS_v3.7.4.bin
+cd /tmp && wget -O http://localhost:8000/KeeneticOS_v3.7.4-Full-16M.bin
 ```
 - ## Flash the Keenetic Firmware
 ```sh
-mtd -e ALL -r write /tmp/KeeneticOS_v3.7.4.bin ALL
+mtd -e ALL -r write /tmp/KeeneticOS_v3.7.4-Full-16M.bin ALL
 ```
 - after rebooting
 # 👉 Goto [192.168.1.1](http://192.168.1.1)
